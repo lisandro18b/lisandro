@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/a_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccione la actividad a realizar"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:id="@+id/a_palindromo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Palindromo" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Indica si el texto ingresado se lee igual de derecha a izquierda (Ej: Neuquen)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <Button
+        android:id="@+id/a_temperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Temperatura" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/a_fibonacci"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fibonacci" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+</LinearLayout>
