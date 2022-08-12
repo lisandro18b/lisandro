@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.pro.Model.User
 import com.pro.R
 import com.pro.ViewModel.UsuarioViewModel
+import com.pro.dao.DBHelper
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var ingresar:Button
     lateinit var registrar:Button
     lateinit var user:User
+    lateinit var dbHelper: DBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,10 +28,17 @@ class MainActivity : AppCompatActivity() {
         inicializar()
         user=User(nombre.text.toString(),contraseña.text.toString())
 
+
+
         //val userVM=ViewModelProvider(this).get(UsuarioViewModel::class.java)
         ingresar.setOnClickListener(){
             user=User(nombre.text.toString(),contraseña.text.toString())
-            Toast.makeText(this,user.name,Toast.LENGTH_LONG).show()
+            if(dbHelper.getUsuario(user)) {
+                Toast.makeText(this,"LOGUEADO",Toast.LENGTH_LONG).show()
+            } else {
+                Toast.makeText(this,"USUARIO NO REGISTRADO",Toast.LENGTH_LONG).show()
+            }
+
         }
 
         registrar.setOnClickListener(){
@@ -40,6 +49,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun inicializar(){
+        dbHelper = DBHelper(this)
         nombre=findViewById(R.id.me_usuario)
         contraseña=findViewById(R.id.me_contraseña)
         ingresar=findViewById(R.id.mb_ingresar)
