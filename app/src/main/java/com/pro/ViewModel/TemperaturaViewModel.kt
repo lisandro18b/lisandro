@@ -9,6 +9,6 @@ class TemperaturaViewModel: ViewModel() {
     }
 
     fun validarSpinner(opcion: Any): Boolean {
-        return opcion == "°C a °K (Kelvin)"
+        return opcion == 0
     }
 }

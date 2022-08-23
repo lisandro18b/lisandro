@@ -23,8 +23,8 @@ class TemperaturaActivity : AppCompatActivity() {
         inicializarSpinner()
         convertir.setOnClickListener(){
             if (viewModel.validarTemp(temp.text.toString())){
-                if (viewModel.validarSpinner(opciones.selectedItem)) {
-                    Toast.makeText(this, temp.text, Toast.LENGTH_LONG).show()
+                if (viewModel.validarSpinner(opciones.selectedItemPosition)) {
+                    Toast.makeText(this, " ${temp.text} k", Toast.LENGTH_LONG).show()
                 }else{
                     Toast.makeText(this, temp.text, Toast.LENGTH_LONG).show()
                 }
