@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             user=User(nombre.text.toString(),contraseña.text.toString())
             if(dbHelper.getUsuario(user)) {
                 val intent:Intent= Intent(this,ActividadActivity::class.java)
-                //intent.putExtra("nombre",user)
+                intent.putExtra("nombre",user)
                 startActivity(intent)
             } else {
                 Toast.makeText(this,"USUARIO NO REGISTRADO",Toast.LENGTH_LONG).show()

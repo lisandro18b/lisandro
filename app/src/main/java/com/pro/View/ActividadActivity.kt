@@ -25,8 +25,8 @@ class ActividadActivity : AppCompatActivity() {
         setContentView(R.layout.actividad_layuot)
 
         inicializar()
-        //val usuario: User= intent.getSerializableExtra("nombre") as User
-        //saludo.text="Bienvenido "
+        val usuario: User= intent.getSerializableExtra("nombre") as User
+        saludo.text="Bienvenido ${usuario.name}"
 
         palindromo.setOnClickListener(){
             val intent: Intent = Intent(this,PalindromoActivity::class.java)
