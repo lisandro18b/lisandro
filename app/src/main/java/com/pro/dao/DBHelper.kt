@@ -24,13 +24,6 @@ class DBHelper(context: Context) :
             const val COLUMN_NOMBRE = "nombre"
             const val COLUMN_CONTRA = "contra"
         }
-
-        // query final. QUERY ES UNA ORDEN PARA LA BASE DE DATOS
-        // "CREATE TABLE personas.db (id INTEGER PRIMARY KEY, nombre TEXT, contra TEXT)"
-
-
-        // val query = "CREATE TABLE " + DATABASE_NAME + "(${BaseColumns._ID} INTEGER PRIMARY KEY, nombre TEXT, contra TEXT)"
-
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -39,7 +32,6 @@ class DBHelper(context: Context) :
                     "${BaseColumns._ID} INTEGER PRIMARY KEY," +
                     "${COLUMN_NOMBRE} TEXT," +
                     "${COLUMN_CONTRA} TEXT)"
-
         db.execSQL(createTable)
     }
 
@@ -66,15 +58,10 @@ class DBHelper(context: Context) :
 
     fun getUsuario(usuario: User) : Boolean {
         return try {
-
-            //SELECT * FROM table_name WHERE nombre = 'licha' AND contra = '123'
-
             val query = "SELECT * FROM $TABLE_NAME WHERE $COLUMN_NOMBRE = '${usuario.name}' AND $COLUMN_CONTRA = '${usuario.pass}'"
-
            this.readableDatabase.rawQuery(query, null, null).moveToFirst()
         } catch (e: Exception) {
             false
         }
     }
-
 }

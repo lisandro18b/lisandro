@@ -8,6 +8,4 @@ class RegistrarViewModel: ViewModel() {
     fun validar(user: User): Boolean {
         return user.name != null || user.pass != null
     }
-
-
 }

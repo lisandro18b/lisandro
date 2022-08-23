@@ -5,7 +5,13 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/a_text"
+        android:id="@+id/a_saludo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido" />
+
+    <TextView
+        android:id="@+id/a_indicador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Seleccione la actividad a realizar"
@@ -13,39 +19,41 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/a_palindromo"
+        android:id="@+id/b_palindromo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Palindromo" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/t_pal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Indica si el texto ingresado se lee igual de derecha a izquierda (Ej: Neuquen)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:textSize="16sp" />
 
     <Button
-        android:id="@+id/a_temperatura"
+        android:id="@+id/b_temperatura"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Temperatura" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/t_temp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Convierte una temperatura ingresada de Celcius (°C) a Kelvin (°K)"
+        android:textSize="16sp" />
 
     <Button
-        android:id="@+id/a_fibonacci"
+        android:id="@+id/b_fibonacci"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Fibonacci" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/t_fibo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Secuencia de Fibonacci"
+        android:textSize="16sp" />
 </LinearLayout>

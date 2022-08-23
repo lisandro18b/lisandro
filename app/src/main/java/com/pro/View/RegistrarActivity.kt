@@ -25,7 +25,6 @@ class RegistrarActivity : AppCompatActivity() {
         setContentView(R.layout.registrar_layout)
         inicializar()
 
-
         save.setOnClickListener() {
             val user: User = User(ruser.text.toString(), rpass.text.toString())
             if(registrarVM.validar(user)){
@@ -38,10 +37,7 @@ class RegistrarActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Debe ingresar nombre y contraseña", Toast.LENGTH_LONG).show()
             }
-
-
         }
-
     }
 
     fun inicializar(){
